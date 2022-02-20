@@ -14,7 +14,6 @@ const (
 
 func CalcSquare(sideLen float64, sidesNum squareInt) float64 {
 	if sidesNum == SidesCircle {
-		/* In This Case, SideLen Is Considered As A Radius */
 		return math.Pi * math.Pow(sideLen, 2)
 	} else if sidesNum == SidesTriangle {
 		return (math.Sqrt(float64(sidesNum)) / 4) * sideLen
