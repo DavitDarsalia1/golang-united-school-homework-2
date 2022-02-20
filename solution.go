@@ -12,15 +12,13 @@ const (
 	SidesSquare
 )
 
-// it's like:
-
 func CalcSquare(sideLen float64, sidesNum squareInt) float64 {
-	if sidesNum == 0 {
+	if sidesNum == SidesCircle {
 		/* In This Case, SideLen Is Considered As A Radius */
 		return math.Pi * math.Pow(sideLen, 2)
-	} else if sidesNum == 3 {
+	} else if sidesNum == SidesTriangle {
 		return (math.Sqrt(float64(sidesNum)) / 4) * sideLen
-	} else if sidesNum == 4 {
+	} else if sidesNum == SidesSquare {
 		return math.Pow(float64(sidesNum), 2)
 	}
 
